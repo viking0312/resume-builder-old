@@ -1,0 +1,20 @@
+<div class="content">
+  <ngx-slick-carousel
+    class="carousel"
+    #slickModal="slick-carousel"
+    [config]="slideConfig"
+  >
+    <div ngxSlickItem *ngFor="let image of images" class="slide">
+      <img
+        (dblclick)="openResume()"
+        src="{{ image.img }}"
+        width="100%"
+        class="img-thumbnail"
+      />
+    </div>
+  </ngx-slick-carousel>
+</div>
+
+<div *ngIf="template1">
+  <app-resume-template1 (template1)="onVoted($event)"></app-resume-template1>
+</div>

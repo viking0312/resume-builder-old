@@ -1,0 +1,14 @@
+.slick-slider {
+  text-align: center;
+  width: 90%;
+  margin: auto;
+}
+
+.content {
+  position: relative;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: red !important;
+}
