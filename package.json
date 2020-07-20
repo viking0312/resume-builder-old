@@ -21,6 +21,7 @@
     "@angular/router": "~8.2.8",
     "bootstrap": "^4.5.0",
     "jquery": "^3.5.1",
+    "jspdf": "^1.5.3",
     "ngx-slick-carousel": "^0.5.1",
     "rxjs": "~6.4.0",
     "slick-carousel": "^1.8.1",

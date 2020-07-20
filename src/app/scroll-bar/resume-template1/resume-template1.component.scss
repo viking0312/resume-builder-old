@@ -2,10 +2,12 @@
   left: 0;
   right: 0;
   margin: auto;
+  padding: 40px;
   width: 70%;
   position: absolute;
   top: 10%;
   background-color: white;
+  height: 200%;
 }
 
 .btn-group {
@@ -28,6 +30,103 @@
   overflow-y: scroll;
   background-color: rgba(0, 0, 0, 0.5);
   cursor: pointer;
+}
+
+h3 {
+  padding: 0 0 5px 0;
+  letter-spacing: -1px;
+  border-bottom: 1px solid #999;
+}
+.row {
+  height: 25px;
+}
+
+body {
+  font: 16px Helvetica, Sans-Serif;
+  line-height: 24px;
+}
+.clear {
+  clear: both;
+}
+#page-wrap {
+}
+#pic {
+  float: right;
+  margin: -30px 0 0 0;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 0 0 6px 0;
+  position: relative;
+}
+h2 span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-style: italic;
+  font-family: Georgia, Serif;
+  font-size: 16px;
+  color: #999;
+  font-weight: normal;
+}
+a {
+  color: #999;
+  text-decoration: none;
+  border-bottom: 1px dotted #999;
+}
+a:hover {
+  border-bottom-style: solid;
+  color: black;
+}
+#objective {
+  width: 500px;
+  float: left;
+}
+#objective p {
+  font-family: Georgia, Serif;
+  font-style: italic;
+  color: #666;
+}
+dt {
+  font-weight: bold;
+  font-size: 22px;
+  margin-left: 40px;
+  width: 150px;
+}
+.title {
+  float: left;
+  margin-left: 20px;
+}
+.title-two {
+  font-weight: bold;
+  font-size: 20px;
+}
+.time-line {
+  margin-left: 20px;
+  float: left;
+}
+.big-square {
+  height: 25px;
+  width: 25px;
+  transform: rotate(45deg);
+  background-color: black;
+  float: left;
+}
+.small-square {
+  height: 10px;
+  width: 10px;
+  transform: rotate(45deg);
+  background-color: black;
+  float: left;
+}
+dd {
+  width: 600px;
+}
+dd.clear {
+  float: none;
+  margin: 0;
+  height: 15px;
 }
 
 #text {
