@@ -1,180 +1,169 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  </head>
 
-  <body>
-    <div id="overlay">
-      <div
-        class="btn-group btn-group-lg"
-        role="group"
-        aria-label="Basic example"
-      >
-        <button type="button" class="btn btn-secondary">Download</button>
-        <button
-          type="button"
-          class="btn btn-secondary"
-          (click)="closeComponent()"
-        >
-          Close
-        </button>
-      </div>
-      <div id="page-wrap" class="content">
-        <div id="contact-info" class="vcard">
-          <!-- Microformats! -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
 
-          <h1 class="font-weight-bold">Maulik Makwana</h1>
-          <h3 class="font-weight-normal">Software Engineer</h3>
+<body>
+  <div id="overlay">
+    <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-secondary" style="background-color: steelblue;" (click)="convetToPDF()">Download</button>
+      <button type="button" class="btn btn-secondary" style="background-color: indianred;" (click)="closeComponent()">
+        Close
+      </button>
+    </div>
+    <div id="page-wrap" class="content">
+      <div id="contact-info" class="vcard">
+        <!-- Microformats! -->
 
-          <div class="row">
-            <p class="col-sm-6">Cell: <span class="tel">555-666-7777</span></p>
-            <p class="col-sm-6">DOB: <span class="tel">June 03,1996</span></p>
-          </div>
-          <div class="row">
-            <p class="col-sm-6 font-weight-normal">
-              Email:
-              <a class="email" href="m.maulik96@gmail.com"
-                >greatoldone@lovecraft.com</a
-              >
-            </p>
-            <p class="col-sm-6 font-weight-normal">
-              Address:
-              <span class="tel">Gachibowli,Hyderabad</span>
-            </p>
-          </div>
+        <h1 class="font-weight-bold">Maulik Makwana</h1>
+        <h3 class="font-weight-normal">Software Engineer</h3>
+
+        <div class="row">
+          <p class="col-sm-6">Cell: <span class="tel">555-666-7777</span></p>
+          <p class="col-sm-6">DOB: <span class="tel">June 03,1996</span></p>
         </div>
-
-        <div>
-          <p class="font-weight-normal" style="padding-top: 10px;">
-            Full Stack Developer with 2+ years of experience in Applicaton
-            Sotware Design, Development, Analysis, Documentaton, Debugging, Unit
-            Testng, Implementaton and Deployment.
+        <div class="row">
+          <p class="col-sm-6 font-weight-normal">
+            Email:
+            <a class="email" href="m.maulik96@gmail.com">greatoldone@lovecraft.com</a>
+          </p>
+          <p class="col-sm-6 font-weight-normal">
+            Address:
+            <span class="tel">Gachibowli,Hyderabad</span>
           </p>
         </div>
-
-        <div class="clear"></div>
-        <div id="experience" style="height: 15%;">
-          <div style="margin-top: 20px;">
-            <span class="big-square"></span>
-            <dt>EXPERIENCE</dt>
-          </div>
-          <div class="row" style="margin-top: 30px;">
-            <div class="col-sm-2 font-weight-bold">
-              <div style="margin-left: 42px;">
-                Aug 2019 -
-              </div>
-              <div style="margin-left: 42px; margin-top: 5px;">
-                Present
-              </div>
-            </div>
-            <div class="col-sm-10">
-              <div class="title-two">Associate Consultant</div>
-              <div style="margin-top: 5px;">Virtusa,Hyderabad</div>
-              <div style="margin-left: -24px; margin-top: 5px;">
-                <ul>
-                  <li>
-                    Worked for British Telecom(BT), whose one of the major
-                    component - Autofix completely made by team
-                  </li>
-                  <li>
-                    Responsible for fulfulling and successfully delivering
-                    complex development stories in time
-                  </li>
-                  <li>
-                    Worked directly with users/customers to develop new
-                    requirements and to fix production issues
-                  </li>
-                  <li>Automated deployment process using Jenkins</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="education" style="height: 15%;">
-          <div style="margin-top: 20px;">
-            <span class="big-square"></span>
-            <dt>EDUCATION</dt>
-          </div>
-          <div class="row" style="margin-top: 30px;">
-            <div class="col-sm-2 font-weight-bold">
-              <div style="margin-left: 42px;">
-                June 2013 -
-              </div>
-              <div style="margin-left: 42px; margin-top: 5px;">
-                May 2017
-              </div>
-            </div>
-            <div class="col-sm-10">
-              <div class="title-two">
-                Bachelor of Technology, Sardar Vallabhbhai National Institute of
-                Technology, Surat
-              </div>
-              <div style="margin-top: 5px;">Computer Engineering</div>
-              <div style="margin-left: -24px; margin-top: 5px;">
-                <ul>
-                  <li>
-                    Graduated with 6.7 CGP
-                  </li>
-                  <li>
-                    Managed a project on Optical Character Recognition(OCR)
-                  </li>
-                  <li>
-                    Got into Graphic Design Internship program for two months
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="skills">
-          <div style="margin-top: 20px;">
-            <span class="big-square"></span>
-            <dt>SKILLS</dt>
-          </div>
-          <div style="margin-top: 30px;">
-            <span class="small-square" style="margin-left: 10px;"></span>
-            <div class="font-weight-bold" style="margin-left: 20px;">
-              Programming Languages/Frameworks
-            </div>
-            <div style="margin-left: 20px;">
-              JAVA, C, Spring, Hibernate
-            </div>
-          </div>
-          <div>
-            <span class="small-square" style="margin-left: 10px;"></span>
-            <div class="font-weight-bold" style="margin-left: 20px;">
-              Programming Languages/Frameworks
-            </div>
-            <div style="margin-left: 20px;">
-              JAVA, C, Spring, Hibernate
-            </div>
-          </div>
-          <div>
-            <span class="small-square" style="margin-left: 10px;"></span>
-            <div class="font-weight-bold" style="margin-left: 20px;">
-              Programming Languages/Frameworks
-            </div>
-            <div style="margin-left: 20px;">
-              JAVA, C, Spring, Hibernate
-            </div>
-          </div>
-          <div>
-            <span class="small-square" style="margin-left: 10px;"></span>
-            <div
-              class="font-weight-bold"
-              style="float: left; margin-left: 20px;"
-            >
-              Programming Languages/Frameworks
-            </div>
-            <div style="float: left; margin-left: 20px;">
-              JAVA, C, Spring, Hibernate
-            </div>
-          </div>
-        </div>
-        <div class="clear"></div>
       </div>
+
+      <div>
+        <p class="font-weight-normal" style="padding-top: 10px;">
+          Full Stack Developer with 2+ years of experience in Applicaton
+          Sotware Design, Development, Analysis, Documentaton, Debugging, Unit
+          Testng, Implementaton and Deployment.
+        </p>
+      </div>
+
+      <div class="clear"></div>
+      <div id="experience" style="height: 15%;">
+        <div style="margin-top: 20px;">
+          <span class="big-square"></span>
+          <dt>EXPERIENCE</dt>
+        </div>
+        <div class="row" style="margin-top: 30px;">
+          <div class="col-sm-2 font-weight-bold">
+            <div style="margin-left: 42px;">
+              Aug 2019 -
+            </div>
+            <div style="margin-left: 42px; margin-top: 5px;">
+              Present
+            </div>
+          </div>
+          <div class="col-sm-10">
+            <div class="title-two">Associate Consultant</div>
+            <div style="margin-top: 5px;">Virtusa,Hyderabad</div>
+            <div style="margin-left: -24px; margin-top: 5px;">
+              <ul>
+                <li>
+                  Worked for British Telecom(BT), whose one of the major
+                  component - Autofix completely made by team
+                </li>
+                <li>
+                  Responsible for fulfulling and successfully delivering
+                  complex development stories in time
+                </li>
+                <li>
+                  Worked directly with users/customers to develop new
+                  requirements and to fix production issues
+                </li>
+                <li>Automated deployment process using Jenkins</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="education" style="height: 15%;">
+        <div style="margin-top: 20px;">
+          <span class="big-square"></span>
+          <dt>EDUCATION</dt>
+        </div>
+        <div class="row" style="margin-top: 30px;">
+          <div class="col-sm-2 font-weight-bold">
+            <div style="margin-left: 42px;">
+              June 2013 -
+            </div>
+            <div style="margin-left: 42px; margin-top: 5px;">
+              May 2017
+            </div>
+          </div>
+          <div class="col-sm-10">
+            <div class="title-two">
+              Bachelor of Technology, Sardar Vallabhbhai National Institute of
+              Technology, Surat
+            </div>
+            <div style="margin-top: 5px;">Computer Engineering</div>
+            <div style="margin-left: -24px; margin-top: 5px;">
+              <ul>
+                <li>
+                  Graduated with 6.7 CGP
+                </li>
+                <li>
+                  Managed a project on Optical Character Recognition(OCR)
+                </li>
+                <li>
+                  Got into Graphic Design Internship program for two months
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="skills">
+        <div style="margin-top: 20px;">
+          <span class="big-square"></span>
+          <dt>SKILLS</dt>
+        </div>
+        <div style="margin-top: 30px;">
+          <span class="small-square" style="margin-left: 10px;"></span>
+          <div class="font-weight-bold" style="margin-left: 20px;">
+            Programming Languages/Frameworks
+          </div>
+          <div style="margin-left: 20px;">
+            JAVA, C, Spring, Hibernate
+          </div>
+        </div>
+        <div>
+          <span class="small-square" style="margin-left: 10px;"></span>
+          <div class="font-weight-bold" style="margin-left: 20px;">
+            Programming Languages/Frameworks
+          </div>
+          <div style="margin-left: 20px;">
+            JAVA, C, Spring, Hibernate
+          </div>
+        </div>
+        <div>
+          <span class="small-square" style="margin-left: 10px;"></span>
+          <div class="font-weight-bold" style="margin-left: 20px;">
+            Programming Languages/Frameworks
+          </div>
+          <div style="margin-left: 20px;">
+            JAVA, C, Spring, Hibernate
+          </div>
+        </div>
+        <div>
+          <span class="small-square" style="margin-left: 10px;"></span>
+          <div class="font-weight-bold" style="float: left; margin-left: 20px;">
+            Programming Languages/Frameworks
+          </div>
+          <div style="float: left; margin-left: 20px;">
+            JAVA, C, Spring, Hibernate
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
