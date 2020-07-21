@@ -19,6 +19,15 @@
   width: 70%;
 }
 
+#education {
+}
+
+#experience {
+}
+
+#skills {
+}
+
 #overlay {
   position: absolute;
   display: block;
@@ -78,6 +87,18 @@ a {
 a:hover {
   border-bottom-style: solid;
   color: black;
+}
+#skills:hover {
+  border: 3px darkgray;
+  background-color: lightgray;
+}
+#experience:hover {
+  border: 3px darkgray;
+  background-color: lightgray;
+}
+#education:hover {
+  border: 3px darkgray;
+  background-color: lightgray;
 }
 #objective {
   width: 500px;
