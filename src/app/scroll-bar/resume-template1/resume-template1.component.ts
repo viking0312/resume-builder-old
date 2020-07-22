@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, ElementRef, ViewChild, EventEmitter } from "@angular/core";
+import { Component, OnInit, Output, ElementRef, ViewChild, EventEmitter,ViewEncapsulation  } from "@angular/core";
 import * as jspdf from 'jspdf';
 import html2canvas from 'html2canvas';
 
@@ -6,6 +6,7 @@ import html2canvas from 'html2canvas';
   selector: "app-resume-template1",
   templateUrl: "./resume-template1.component.html",
   styleUrls: ["./resume-template1.component.scss"],
+  encapsulation: ViewEncapsulation.None
 })
 export class ResumeTemplate1Component implements OnInit {
   @Output() template1 = new EventEmitter<boolean>();
