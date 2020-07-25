@@ -1,139 +1,141 @@
 <!DOCTYPE html>
 
 <html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-</head>
-
-<body>
-  <div id="overlay">
-    <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
-      <button type="button" class="btn btn-secondary" style="background-color: steelblue;" (click)="convetToPDF()">Download</button>
-      <button type="button" class="btn btn-secondary" style="background-color: indianred;" (click)="closeComponent()">
-        Close
-      </button>
-    </div>
-    <div id="page-wrap" class="content">
-      <div id="contact-info" class="vcard">
-        <!-- Microformats! -->
-
-        <h1 class="font-weight-bold">Maulik Makwana</h1>
-        <h3 class="font-weight-normal">Software Engineer</h3>
-
-        <div class="row">
-          <p class="col-sm-6">Cell: <span class="tel">555-666-7777</span></p>
-          <p class="col-sm-6">DOB: <span class="tel">June 03,1996</span></p>
-        </div>
-        <div class="row">
-          <p class="col-sm-6 font-weight-normal">
-            Email:
-            <a class="email" href="m.maulik96@gmail.com">greatoldone@lovecraft.com</a>
-          </p>
-          <p class="col-sm-6 font-weight-normal">
-            Address:
-            <span class="tel">Gachibowli,Hyderabad</span>
-          </p>
-        </div>
+  <body>
+    <div id="overlay">
+      <div
+        class="btn-group btn-group-lg"
+        role="group"
+        aria-label="Basic example"
+      >
+        <button
+          type="button"
+          class="btn btn-secondary"
+          style="background-color: steelblue;"
+          (click)="convetToPDF()"
+        >
+          Download
+        </button>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          style="background-color: indianred;"
+          (click)="closeComponent()"
+        >
+          Close
+        </button>
       </div>
+      <div id="page-wrap" class="content">
+        <div id="contact-info" class="vcard">
+          <!-- Microformats! -->
 
-      <div>
-        <p class="font-weight-normal" style="padding-top: 10px;">
-          Full Stack Developer with 2+ years of experience in Applicaton
-          Sotware Design, Development, Analysis, Documentaton, Debugging, Unit
-          Testng, Implementaton and Deployment.
-        </p>
-      </div>
+          <h1 class="font-weight-bold">{{ personalInfoObj.name }}</h1>
+          <h3 class="font-weight-normal">{{ personalInfoObj.role }}</h3>
 
-      <div id="experience">
-        <div style="margin-top: 20px;">
-          <span class="big-square"></span>
-          <dt>EXPERIENCE</dt>
-        </div>
-        <div class="col-sm-12" style="margin-top: 30px;">
-          <div class="col-sm-2 font-weight-bold" style="float: left;">
-            <div>
-              Aug 2019 -
-            </div>
-            <div style="margin-top: 5px;">
-              Present
-            </div>
+          <div class="row">
+            <p class="col-sm-6">
+              Cell: <span class="tel">{{ personalInfoObj.cell }}</span>
+            </p>
+            <p class="col-sm-6">
+              DOB: <span class="tel">{{ personalInfoObj.dob }}</span>
+            </p>
           </div>
-          <div class="col-sm-10" style="float: left;">
-            <div class="title-two">Associate Consultant</div>
-            <div style="margin-top: 5px;">Virtusa,Hyderabad</div>
-            <div style="margin-left: -24px; margin-top: 5px;">
-              <ul>
-                <li>
-                  Worked for British Telecom(BT), whose one of the major
-                  component - Autofix completely made by team
-                </li>
-                <li>
-                  Responsible for fulfulling and successfully delivering
-                  complex development stories in time
-                </li>
-                <li>
-                  Worked directly with users/customers to develop new
-                  requirements and to fix production issues
-                </li>
-                <li>Automated deployment process using Jenkins</li>
-              </ul>
-            </div>
+          <div class="row">
+            <p class="col-sm-6 font-weight-normal">
+              Email:
+              <a class="email" href="m.maulik96@gmail.com">{{
+                personalInfoObj.email
+              }}</a>
+            </p>
+            <p class="col-sm-6 font-weight-normal">
+              Address:
+              <span class="tel">{{ personalInfoObj.address }}</span>
+            </p>
           </div>
         </div>
-      </div>
-      <div id="education">
+
         <div>
-          <span class="big-square"></span><dt>EDUCATION</dt>
+          <p class="font-weight-normal" style="padding-top: 10px;">
+            {{ personalInfoObj.decription }}
+          </p>
         </div>
-        <div class="col-sm-12" style="margin-top: 30px;">
-          <div class="col-sm-2 font-weight-bold" style="float: left;">
-            <div> June 2013 -</div>
-            <div style="margin-top: 5px;"> May 2017 </div>
+
+        <div id="experience">
+          <div style="margin-top: 20px;">
+            <span class="big-square"></span>
+            <dt>EXPERIENCE</dt>
           </div>
-          <div class="col-sm-10" style="float: left;">
-            <div class="title-two">
-              Bachelor of Technology, Sardar Vallabhbhai National Institute of
-              Technology.
+          <div
+            class="col-sm-12"
+            style="margin-top: 30px;"
+            *ngFor="let experience of experienceObj"
+          >
+            <div class="col-sm-2 font-weight-bold" style="float: left;">
+              <div>{{ experience.fromDate }} -</div>
+              <div style="margin-top: 5px;">
+                {{ experience.toDate }}
+              </div>
             </div>
-            <div style="margin-top: 5px;">Computer Engineering</div>
-            <div style="margin-left: -24px; margin-top: 5px;">
-              <ul>
-                <li>Graduated with 6.7 CGP</li>
-                <li>Managed a project on Optical Character Recognition(OCR)</li>
-                <li>Got into Graphic Design Internship program for two months</li>
-              </ul>
+            <div class="col-sm-10" style="float: left;">
+              <div class="title-two">{{ experience.role }}</div>
+              <div style="margin-top: 5px;">{{ experience.company }}</div>
+              <div style="margin-left: -24px; margin-top: 5px;">
+                <ul *ngFor="let keyPoint of experience.keyPoints">
+                  <li>
+                    {{ keyPoint }}
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div id="skills">
-        <div style="margin-top: 20px;">
-          <span class="big-square"></span><dt>SKILLS</dt>
+        <div id="education">
+          <div>
+            <span class="big-square"></span>
+            <dt>EDUCATION</dt>
+          </div>
+          <div
+            class="col-sm-12"
+            style="margin-top: 30px;"
+            *ngFor="let education of educationObj"
+          >
+            <div class="col-sm-2 font-weight-bold" style="float: left;">
+              <div>{{ education.toDate }} -</div>
+              <div style="margin-top: 5px;">{{ education.fromDate }}</div>
+            </div>
+            <div class="col-sm-10" style="float: left;">
+              <div class="title-two">
+                {{ education.institute }}
+              </div>
+              <div style="margin-top: 5px;">{{ education.degree }}</div>
+              <div style="margin-left: -24px; margin-top: 5px;">
+                <ul *ngFor="let keyPoint of education.keyPoints">
+                  <li>{{ keyPoint }}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-        <div style="margin-top: 30px;">
-          <div style="margin-left: 9px;">
-            <span class="small-square"></span><span class="font-weight-bold" style="margin-left: 22px;">Programming
-              Languages/Frameworks</span>
-            &nbsp;&nbsp;&nbsp;&nbsp; JAVA, C, Spring, Hibernate</div>
-        </div>
-        <div style="margin-top: 30px;">
-          <div style="margin-left: 9px;">
-            <span class="small-square"></span><span class="font-weight-bold" style="margin-left: 22px;">
-              Programming
-              Languages/Frameworks</span>
-            &nbsp;&nbsp;&nbsp;&nbsp; JAVA, C, Spring, Hibernate</div>
-          <div style="margin-left: 20px;"> </div>
-        </div>
-        <div style="margin-top: 30px;">
-          <div style="margin-left: 9px;">
-            <span class="small-square"></span><span class="font-weight-bold" style="margin-left: 22px;">Programming
-              Languages/Frameworks</span>
-            &nbsp;&nbsp;&nbsp;&nbsp; JAVA, C, Spring, Hibernate</div>
+        <div id="skills">
+          <div style="margin-top: 20px;">
+            <span class="big-square"></span>
+            <dt>SKILLS</dt>
+          </div>
+          <div style="margin-top: 30px;" *ngFor="let key of skills">
+            <div style="margin-left: 9px;">
+              <span class="small-square"></span
+              ><span class="font-weight-bold" style="margin-left: 22px;">{{
+                key
+              }}</span>
+              &nbsp;&nbsp;&nbsp;&nbsp; {{ skillsObj[key] }}
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>

@@ -1,0 +1,67 @@
+{
+  "template1": {
+    "personalInfo": {
+      "name": "Maulik Makwana",
+      "role": "Software Engineer",
+      "cell": 7995710312,
+      "email": "m.maulik96@gmail.com",
+      "dob": "June 03,1996",
+      "address": "Gachibowli",
+      "decription": "Full Stack Developer with 2+ years of experience in Applicaton Sotware Design, Development, Analysis, Documentaton, Debugging, Unit Testing, Implementaton and Deployment."
+    },
+    "experience": [
+      {
+        "fromDate": "Aug 2019",
+        "toDate": "Present",
+        "role": "Associate Consultant",
+        "company": "Virtusa,Hyderabad",
+        "keyPoints": [
+          "Worked for British Telecom(BT), whose one of the major component - Autofix completely made by team",
+          "Responsible for fulfulling and successfully delivering complex development stories in time",
+          "Worked directly with users/customers to develop new requirements and to fix production issues",
+          "Automated deployment process using Jenkins"
+        ]
+      },
+      {
+        "fromDate": "July 2017",
+        "toDate": "Aug 2019",
+        "role": "Software Engineer",
+        "company": "Virtusa,Hyderabad",
+        "keyPoints": [
+          "Worked for British Telecom(BT), whose one of the major component - Autofix completely made by team",
+          "Responsible for Bug analysis and fixing for test environment",
+          "Responsible for deployment and maintainance in test enviorment",
+          "Awarded as Top Performer for the year 2019"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "fromDate": "July 2013",
+        "toDate": "May 2017",
+        "institute": "Sardar Vallabhbhai National Institute of Technology,Surat",
+        "degree": "Computer Engineering",
+        "keyPoints": [
+          "Graduated with 6.7 CGPA",
+          "Managed a project on Op􀆟cal Character Recogni􀆟on(OCR)",
+          "Got into Graphic Design Internship program for two months"
+        ]
+      }
+    ],
+    "skills": {
+      "Programming Languages/Frameworks": "JAVA, C, Spring, Hibernate",
+      "Scripting Languages/Frameworks": "Angular 7, HTML, CSS",
+      "Database Management tools": "Oracle 11g, MySQL Workbench Tool",
+      "Deployment tools": "Jenkins, Putty, FileZilla",
+      "Version Control tools": "GIT, SVN",
+      "IDEs": "Eclipse, Visual Studio Code",
+      "Developement model": "Agile",
+      "Graphic Design tools": "Photoshop, Illustartor"
+    }
+  },
+  "template2": {},
+  "template3": {},
+  "template4": {},
+  "template5": {},
+  "template6": {}
+}
