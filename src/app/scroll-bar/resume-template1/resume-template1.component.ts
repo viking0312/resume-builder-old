@@ -29,6 +29,7 @@ export class ResumeTemplate1Component implements OnInit {
   }
 
   ngOnInit() {
+    console.log("component loading..");
     this.experienceObj = sampleTemplate.template1.experience;
     this.personalInfoObj = sampleTemplate.template1.personalInfo;
     this.educationObj = sampleTemplate.template1.education;
@@ -38,6 +39,12 @@ export class ResumeTemplate1Component implements OnInit {
 
   closeComponent() {
     this.template1.emit(false);
+  }
+  updateSkills(data) {
+    console.log("what the hell" + JSON.stringify(data));
+    this.skillsObj = data;
+    if (data != null) this.skills = Object.keys(this.skillsObj);
+    else this.skills = [];
   }
   public convetToPDF() {
     var data = document.getElementById("page-wrap");

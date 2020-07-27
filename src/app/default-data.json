@@ -49,14 +49,14 @@
       }
     ],
     "skills": {
-      "Programming Languages/Frameworks": "JAVA, C, Spring, Hibernate",
-      "Scripting Languages/Frameworks": "Angular 7, HTML, CSS",
-      "Database Management tools": "Oracle 11g, MySQL Workbench Tool",
-      "Deployment tools": "Jenkins, Putty, FileZilla",
-      "Version Control tools": "GIT, SVN",
-      "IDEs": "Eclipse, Visual Studio Code",
-      "Developement model": "Agile",
-      "Graphic Design tools": "Photoshop, Illustartor"
+      "Programming Languages/Frameworks": ["JAVA", "C", "Spring", "Hibernate"],
+      "Scripting Languages/Frameworks": ["Angular 7", "HTML", "CSS"],
+      "Database Management tools": ["Oracle 11g", "MySQL Workbench Tool"],
+      "Deployment tools": ["Jenkins", "Putty", "FileZilla"],
+      "Version Control tools": ["GIT", "SVN"],
+      "IDEs": ["Eclipse", "Visual Studio Code"],
+      "Developement model": ["Agile"],
+      "Graphic Design tools": ["Photoshop", "Illustartor"]
     }
   },
   "template2": {},
