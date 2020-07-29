@@ -6,7 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
   styleUrls: ["./skills.component.scss"],
 })
 export class SkillsComponent implements OnInit {
-  @Input() skills: any;
+  @Input() skills = {};
   @Output() skillsObj = new EventEmitter();
   skillKeys: string[];
   newKey: string;
@@ -17,7 +17,7 @@ export class SkillsComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    //console.log("maulik" + JSON.stringify(this.skills));
+    console.log("maulik ngon" + JSON.stringify(this.skills));
     this.skillKeys = Object.keys(this.skills);
   }
 
@@ -29,12 +29,14 @@ export class SkillsComponent implements OnInit {
   }
 
   saveChanges() {
-    console.log("what the frick");
     this.skillsObj.emit(this.skills);
   }
   clearData() {
-    console.log("clearing dta");
-    this.skills = null;
+    this.skills = {};
     this.skillKeys = [];
+  }
+  deleteRow(key: string) {
+    delete this.skills[key];
+    this.skillKeys = Object.keys(this.skills);
   }
 }
