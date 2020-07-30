@@ -1,0 +1,128 @@
+<div
+  class="modal fade"
+  id="educationModalCenter"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Educations</h5>
+        <button
+          type="button"
+          class="btn btn-primary float-right"
+          (click)="clearData()"
+        >
+          Clear
+        </button>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <button type="button" class="btn btn-primary" (click)="addEducations()">
+          Add Other Educations
+        </button>
+        <table class="table table-hover">
+          <tbody *ngFor="let key of educationInfo">
+            <tr>
+              <td>From Date</td>
+              <td>
+                <input
+                  type="text"
+                  placeholder="yyyy-mm-dd"
+                  [name]="fromDate"
+                  [(ngModel)]="key.fromDate"
+                  ngbDatepicker
+                  #d1="ngbDatepicker"
+                />
+                <button
+                  class="btn btn-outline-secondary calendar"
+                  (click)="d1.toggle()"
+                  type="button"
+                ></button>
+              </td>
+              <td>To Date</td>
+              <td>
+                <input
+                  type="text"
+                  placeholder="yyyy-mm-dd"
+                  [name]="toDate"
+                  [(ngModel)]="key.toDate"
+                  ngbDatepicker
+                  #d2="ngbDatepicker"
+                />
+                <button
+                  class="btn btn-outline-secondary calendar"
+                  (click)="d2.toggle()"
+                  type="button"
+                ></button>
+              </td>
+            </tr>
+            <tr>
+              <td>Degree</td>
+              <td colspan="3">
+                <input type="text" style="width:90%" [(ngModel)]="key.degree" />
+              </td>
+            </tr>
+            <tr>
+              <td>Institute</td>
+              <td colspan="3">
+                <input
+                  type="text"
+                  style="width:90%"
+                  [(ngModel)]="key.institute"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td colspan="3">
+                <input
+                  type="text"
+                  id="myInput"
+                  [(ngModel)]="addKeys"
+                  style="width:90%"
+                  placeholder="Add your education details..."
+                />
+                <span (click)="newElement(addKeys, key)" class="addBtn"
+                  >Add</span
+                >
+              </td>
+            </tr>
+            <tr *ngFor="let keys of key.keyPoints">
+              <td></td>
+              <td colspan="3">
+                <li>{{ keys }}</li>
+              </td>
+              <td>
+                <button
+                  type="button"
+                  class="close"
+                  (click)="deleteRow(keys, key)"
+                >
+                  <span>&times;</span>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary" (click)="saveChanges()">
+          Save changes
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

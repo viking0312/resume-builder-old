@@ -37,13 +37,13 @@
     ],
     "education": [
       {
-        "fromDate": "July 2013",
-        "toDate": "May 2017",
+        "fromDate": { "year": 2020, "month": 7, "day": 17 },
+        "toDate": { "year": 2021, "month": 12, "day": 27 },
         "institute": "Sardar Vallabhbhai National Institute of Technology,Surat",
         "degree": "Computer Engineering",
         "keyPoints": [
           "Graduated with 6.7 CGPA",
-          "Managed a project on Op􀆟cal Character Recogni􀆟on(OCR)",
+          "Managed a project on Optical Character Recognizaon(OCR)",
           "Got into Graphic Design Internship program for two months"
         ]
       }

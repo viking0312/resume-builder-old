@@ -5,7 +5,7 @@ import {
   ElementRef,
   ViewChild,
   EventEmitter,
-  ViewEncapsulation,
+  ViewEncapsulation
 } from "@angular/core";
 import * as jspdf from "jspdf";
 import html2canvas from "html2canvas";
@@ -15,7 +15,7 @@ import sampleTemplate from "../../default-data.json";
   selector: "app-resume-template1",
   templateUrl: "./resume-template1.component.html",
   styleUrls: ["./resume-template1.component.scss"],
-  encapsulation: ViewEncapsulation.None,
+  encapsulation: ViewEncapsulation.None
 })
 export class ResumeTemplate1Component implements OnInit {
   personalInfoObj: any;
@@ -23,6 +23,7 @@ export class ResumeTemplate1Component implements OnInit {
   educationObj = [];
   skillsObj: any;
   skills: any;
+  educations: any;
   @Output() template1 = new EventEmitter<boolean>();
   constructor(private hostElement: ElementRef) {
     console.log(this.hostElement.nativeElement.outerHTML);
@@ -35,6 +36,7 @@ export class ResumeTemplate1Component implements OnInit {
     this.educationObj = sampleTemplate.template1.education;
     this.skillsObj = sampleTemplate.template1.skills;
     this.skills = Object.keys(this.skillsObj);
+    this.educations = Object.keys(this.educationObj);
   }
 
   closeComponent() {
@@ -46,9 +48,15 @@ export class ResumeTemplate1Component implements OnInit {
     if (data != null) this.skills = Object.keys(this.skillsObj);
     else this.skills = [];
   }
+  updateEducations(data) {
+    console.log("what the hell for educations" + JSON.stringify(data));
+    this.educationObj = data;
+    if (data != null) this.educations = Object.keys(this.educationObj);
+    else this.educations = [];
+  }
   public convetToPDF() {
     var data = document.getElementById("page-wrap");
-    html2canvas(data).then((canvas) => {
+    html2canvas(data).then(canvas => {
       // Few necessary setting options
       var imgWidth = 208;
       var pageHeight = 295;

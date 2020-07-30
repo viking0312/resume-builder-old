@@ -93,7 +93,7 @@
             </div>
           </div>
         </div>
-        <div id="education">
+        <div id="education" data-toggle="modal" data-target="#educationModalCenter">
           <div>
             <span class="big-square"></span>
             <dt>EDUCATION</dt>
@@ -104,8 +104,8 @@
             *ngFor="let education of educationObj"
           >
             <div class="col-sm-2 font-weight-bold" style="float: left;">
-              <div>{{ education.toDate }} -</div>
-              <div style="margin-top: 5px;">{{ education.fromDate }}</div>
+              <div>{{ education.toDate.year }}-{{ education.toDate.month }}-{{ education.toDate.day }}</div>
+              <div style="margin-top: 5px;">{{ education.fromDate.year }}-{{ education.fromDate.month }}-{{ education.fromDate.day }}</div>
             </div>
             <div class="col-sm-10" style="float: left;">
               <div class="title-two">
@@ -139,7 +139,9 @@
     </div>
   </body>
 </html>
+<app-edit-education-dialog [educations]="educationObj" (educationObj)="updateEducations($event)"></app-edit-education-dialog>
 <app-skills
   [skills]="skillsObj"
   (skillsObj)="updateSkills($event)"
 ></app-skills>
+  

@@ -7,8 +7,10 @@ import { ScrollBarComponent } from "./scroll-bar/scroll-bar.component";
 import { ResumeTemplate1Component } from "./scroll-bar/resume-template1/resume-template1.component";
 import { SkillsComponent } from "./scroll-bar/resume-template1/skills/skills.component";
 import { TagInputModule } from "ngx-chips";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { EditEducationDialogComponent } from "./scroll-bar/resume-template1/edit-education-dialog/edit-education-dialog.component";
 
 @NgModule({
   declarations: [
@@ -16,17 +18,19 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     ScrollBarComponent,
     ResumeTemplate1Component,
     SkillsComponent,
+    EditEducationDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SlickCarouselModule,
     TagInputModule,
+    NgbModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
