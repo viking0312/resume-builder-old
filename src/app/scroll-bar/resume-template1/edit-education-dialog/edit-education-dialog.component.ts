@@ -10,8 +10,7 @@ import {
 @Component({
   selector: "app-edit-education-dialog",
   templateUrl: "./edit-education-dialog.component.html",
-  styleUrls: ["./edit-education-dialog.component.scss"],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ["./edit-education-dialog.component.scss"]
 })
 export class EditEducationDialogComponent implements OnInit {
   @Input() educations: any;
@@ -57,9 +56,12 @@ export class EditEducationDialogComponent implements OnInit {
   saveChanges() {
     console.log("Inside saveChanges");
     console.log(this.educationInfo);
+    console.log(this.educations);
     this.educationObj.emit(this.educationInfo);
   }
   clearData() {
-    this.educationInfo = [{ fromDate: "", toDate: "", institute: "" }];
+    this.educationInfo = [
+      { fromDate: "", toDate: "", institute: "", degree: "", keyPoints: [] }
+    ];
   }
 }
