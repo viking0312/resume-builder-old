@@ -11,6 +11,7 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { EditEducationDialogComponent } from "./scroll-bar/resume-template1/edit-education-dialog/edit-education-dialog.component";
+import { EditExperienceDialogComponent } from './scroll-bar/resume-template1/edit-experience-dialog/edit-experience-dialog.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { EditEducationDialogComponent } from "./scroll-bar/resume-template1/edit
     ScrollBarComponent,
     ResumeTemplate1Component,
     SkillsComponent,
-    EditEducationDialogComponent
+    EditEducationDialogComponent,
+    EditExperienceDialogComponent
   ],
   imports: [
     BrowserModule,

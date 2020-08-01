@@ -24,6 +24,7 @@ export class ResumeTemplate1Component implements OnInit {
   skillsObj: any;
   skills: any;
   educations: any;
+  experiences: any;
   @Output() template1 = new EventEmitter<boolean>();
   constructor(private hostElement: ElementRef) {
     console.log(this.hostElement.nativeElement.outerHTML);
@@ -37,6 +38,7 @@ export class ResumeTemplate1Component implements OnInit {
     this.skillsObj = sampleTemplate.template1.skills;
     this.skills = Object.keys(this.skillsObj);
     this.educations = Object.keys(this.educationObj);
+    this.experiences = Object.keys(this.experienceObj);
   }
 
   closeComponent() {
@@ -53,6 +55,12 @@ export class ResumeTemplate1Component implements OnInit {
     this.educationObj = data;
     if (data != null) this.educations = Object.keys(this.educationObj);
     else this.educations = [];
+  }
+  updateExperience(data) {
+    console.log("what the hell for experiences" + JSON.stringify(data));
+    this.experienceObj = data;
+    if (data != null) this.experiences = Object.keys(this.experienceObj);
+    else this.experiences = [];
   }
   public convetToPDF() {
     var data = document.getElementById("page-wrap");

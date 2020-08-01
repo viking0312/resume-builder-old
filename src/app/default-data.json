@@ -11,8 +11,8 @@
     },
     "experience": [
       {
-        "fromDate": "Aug 2019",
-        "toDate": "Present",
+        "fromDate": { "year": 2019, "month": 8, "day": 1 },
+        "toDate": { "year": 2020, "month": 8, "day": 2 },
         "role": "Associate Consultant",
         "company": "Virtusa,Hyderabad",
         "keyPoints": [
@@ -20,18 +20,6 @@
           "Responsible for fulfulling and successfully delivering complex development stories in time",
           "Worked directly with users/customers to develop new requirements and to fix production issues",
           "Automated deployment process using Jenkins"
-        ]
-      },
-      {
-        "fromDate": "July 2017",
-        "toDate": "Aug 2019",
-        "role": "Software Engineer",
-        "company": "Virtusa,Hyderabad",
-        "keyPoints": [
-          "Worked for British Telecom(BT), whose one of the major component - Autofix completely made by team",
-          "Responsible for Bug analysis and fixing for test environment",
-          "Responsible for deployment and maintainance in test enviorment",
-          "Awarded as Top Performer for the year 2019"
         ]
       }
     ],

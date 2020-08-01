@@ -64,7 +64,7 @@
           </p>
         </div>
 
-        <div id="experience">
+        <div id="experience" data-toggle="modal" data-target="#experienceModalCenter">
           <div style="margin-top: 20px;">
             <span class="big-square"></span>
             <dt>EXPERIENCE</dt>
@@ -74,12 +74,12 @@
             style="margin-top: 30px;"
             *ngFor="let experience of experienceObj"
           >
-            <div class="col-sm-2 font-weight-bold" style="float: left;">
-              <div>{{ experience.fromDate }} -</div>
-              <div style="margin-top: 5px;">
-                {{ experience.toDate }}
-              </div>
-            </div>
+          <div class="col-sm-2 font-weight-bold" style="float: left;">
+            <div *ngIf="!experience.toDate.year">{{ experience.toDate }}</div>
+            <div *ngIf="experience.toDate.year">{{ experience.toDate.year }}-{{ experience.toDate.month }}-{{ experience.toDate.day }}</div>
+            <div *ngIf="!experience.fromDate.year">{{ experience.fromDate }}</div>
+            <div *ngIf="experience.fromDate.year" style="margin-top: 5px;">{{ experience.fromDate.year }}-{{ experience.fromDate.month }}-{{ experience.fromDate.day }}</div>
+          </div>
             <div class="col-sm-10" style="float: left;">
               <div class="title-two">{{ experience.role }}</div>
               <div style="margin-top: 5px;">{{ experience.company }}</div>
@@ -104,8 +104,10 @@
             *ngFor="let education of educationObj"
           >
             <div class="col-sm-2 font-weight-bold" style="float: left;">
-              <div>{{ education.toDate.year }}-{{ education.toDate.month }}-{{ education.toDate.day }}</div>
-              <div style="margin-top: 5px;">{{ education.fromDate.year }}-{{ education.fromDate.month }}-{{ education.fromDate.day }}</div>
+              <div *ngIf="!education.toDate.year">{{ education.toDate }}</div>
+              <div *ngIf="education.toDate.year">{{ education.toDate.year }}-{{ education.toDate.month }}-{{ education.toDate.day }}</div>
+              <div *ngIf="!education.fromDate.year">{{ education.fromDate }}</div>
+              <div *ngIf="education.fromDate.year" style="margin-top: 5px;">{{ education.fromDate.year }}-{{ education.fromDate.month }}-{{ education.fromDate.day }}</div>
             </div>
             <div class="col-sm-10" style="float: left;">
               <div class="title-two">
@@ -139,6 +141,7 @@
     </div>
   </body>
 </html>
+<app-edit-experience-dialog [experiences]="experienceObj" (experienceObj)="updateExperience($event)"></app-edit-experience-dialog>
 <app-edit-education-dialog [educations]="educationObj" (educationObj)="updateEducations($event)"></app-edit-education-dialog>
 <app-skills
   [skills]="skillsObj"

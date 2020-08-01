@@ -18,6 +18,7 @@ export class EditEducationDialogComponent implements OnInit {
   educationInfo: any;
   newEducations: any;
   addKeys: any;
+  educationTempInfo: any;
 
   //maulik: [String] = ["what"];
 
@@ -25,9 +26,9 @@ export class EditEducationDialogComponent implements OnInit {
 
   ngOnInit() {
     //console.log("maulik" + JSON.stringify(this.skills));
-    this.educationInfo = this.educations;
+    //this.educationInfo = this.educations;
+    this.educationInfo = JSON.parse(JSON.stringify(this.educations));
   }
-
   addEducations() {
     this.newEducations = {
       fromDate: "",
@@ -56,12 +57,17 @@ export class EditEducationDialogComponent implements OnInit {
   saveChanges() {
     console.log("Inside saveChanges");
     console.log(this.educationInfo);
-    console.log(this.educations);
     this.educationObj.emit(this.educationInfo);
   }
+
   clearData() {
-    this.educationInfo = [
-      { fromDate: "", toDate: "", institute: "", degree: "", keyPoints: [] }
-    ];
+    this.educationInfo = {
+      fromDate: "",
+      toDate: "",
+      institute: "",
+      degree: "",
+      index: 0,
+      keyPoints: []
+    };
   }
 }

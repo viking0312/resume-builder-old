@@ -1,6 +1,6 @@
 <div
   class="modal fade"
-  id="educationModalCenter"
+  id="experienceModalCenter"
   tabindex="-1"
   role="dialog"
   aria-labelledby="exampleModalCenterTitle"
@@ -9,7 +9,7 @@
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle">Educations</h5>
+        <h5 class="modal-title" id="exampleModalCenterTitle">Experience Deatils</h5>
         <button
           type="button"
           class="btn btn-primary float-right"
@@ -27,11 +27,11 @@
         </button>
       </div>
       <div class="modal-body">
-        <button type="button" class="btn btn-primary" (click)="addEducations()">
-          Add Other Educations
+        <button type="button" class="btn btn-primary" (click)="addexperiences()">
+          Add Other Experience
         </button>
         <table class="table table-hover">
-          <tbody *ngFor="let key of educationInfo">
+          <tbody *ngFor="let key of experienceInfo">
             <tr>
               <td>From Date</td>
               <td>
@@ -68,18 +68,18 @@
               </td>
             </tr>
             <tr>
-              <td>Degree</td>
+              <td>Company</td>
               <td colspan="3">
-                <input type="text" style="width:90%" [(ngModel)]="key.degree" />
+                <input type="text" style="width:90%" [(ngModel)]="key.company" />
               </td>
             </tr>
             <tr>
-              <td>Institute</td>
+              <td>Job Role</td>
               <td colspan="3">
                 <input
                   type="text"
                   style="width:90%"
-                  [(ngModel)]="key.institute"
+                  [(ngModel)]="key.role"
                 />
               </td>
             </tr>
@@ -91,7 +91,7 @@
                   id="myInput"
                   [(ngModel)]="addKeys"
                   style="width:90%"
-                  placeholder="Add your education details..."
+                  placeholder="Add your experience details..."
                 />
                 <span (click)="newElement(addKeys, key)" class="addBtn"
                   >Add</span
