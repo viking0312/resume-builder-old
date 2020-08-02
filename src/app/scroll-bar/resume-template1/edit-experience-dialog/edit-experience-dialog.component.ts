@@ -3,7 +3,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 @Component({
   selector: "app-edit-experience-dialog",
   templateUrl: "./edit-experience-dialog.component.html",
-  styleUrls: ["./edit-experience-dialog.component.scss"]
+  styleUrls: ["./edit-experience-dialog.component.scss"],
 })
 export class EditExperienceDialogComponent implements OnInit {
   @Input() experiences: any;
@@ -28,7 +28,7 @@ export class EditExperienceDialogComponent implements OnInit {
       toDate: "",
       institute: "",
       degree: "",
-      keyPoints: []
+      keyPoints: [],
     };
     this.experienceInfo.push(this.newexperiences);
     //this.newexperiences = [];
@@ -60,7 +60,7 @@ export class EditExperienceDialogComponent implements OnInit {
       institute: "",
       degree: "",
       index: 0,
-      keyPoints: []
+      keyPoints: [],
     };
   }
 }

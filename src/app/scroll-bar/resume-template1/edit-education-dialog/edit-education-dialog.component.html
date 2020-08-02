@@ -38,7 +38,7 @@
                 <input
                   type="text"
                   placeholder="yyyy-mm-dd"
-                  [name]="fromDate"
+                  name="fromDate"
                   [(ngModel)]="key.fromDate"
                   ngbDatepicker
                   #d1="ngbDatepicker"
@@ -55,7 +55,7 @@
                 <input
                   type="text"
                   placeholder="yyyy-mm-dd"
-                  [name]="toDate"
+                  name="toDate"
                   [(ngModel)]="key.toDate"
                   ngbDatepicker
                   #d2="ngbDatepicker"
@@ -70,7 +70,11 @@
             <tr>
               <td>Degree</td>
               <td colspan="3">
-                <input type="text" style="width:90%" [(ngModel)]="key.degree" />
+                <input
+                  type="text"
+                  style="width: 90%;"
+                  [(ngModel)]="key.degree"
+                />
               </td>
             </tr>
             <tr>
@@ -78,7 +82,7 @@
               <td colspan="3">
                 <input
                   type="text"
-                  style="width:90%"
+                  style="width: 90%;"
                   [(ngModel)]="key.institute"
                 />
               </td>
@@ -90,7 +94,7 @@
                   type="text"
                   id="myInput"
                   [(ngModel)]="addKeys"
-                  style="width:90%"
+                  style="width: 90%;"
                   placeholder="Add your education details..."
                 />
                 <span (click)="newElement(addKeys, key)" class="addBtn"

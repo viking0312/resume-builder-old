@@ -9,7 +9,9 @@
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle">Experience Deatils</h5>
+        <h5 class="modal-title" id="exampleModalCenterTitle">
+          Experience Deatils
+        </h5>
         <button
           type="button"
           class="btn btn-primary float-right"
@@ -27,7 +29,11 @@
         </button>
       </div>
       <div class="modal-body">
-        <button type="button" class="btn btn-primary" (click)="addexperiences()">
+        <button
+          type="button"
+          class="btn btn-primary"
+          (click)="addexperiences()"
+        >
           Add Other Experience
         </button>
         <table class="table table-hover">
@@ -38,7 +44,7 @@
                 <input
                   type="text"
                   placeholder="yyyy-mm-dd"
-                  [name]="fromDate"
+                  name="fromDate"
                   [(ngModel)]="key.fromDate"
                   ngbDatepicker
                   #d1="ngbDatepicker"
@@ -55,7 +61,7 @@
                 <input
                   type="text"
                   placeholder="yyyy-mm-dd"
-                  [name]="toDate"
+                  name="toDate"
                   [(ngModel)]="key.toDate"
                   ngbDatepicker
                   #d2="ngbDatepicker"
@@ -70,17 +76,17 @@
             <tr>
               <td>Company</td>
               <td colspan="3">
-                <input type="text" style="width:90%" [(ngModel)]="key.company" />
+                <input
+                  type="text"
+                  style="width: 90%;"
+                  [(ngModel)]="key.company"
+                />
               </td>
             </tr>
             <tr>
               <td>Job Role</td>
               <td colspan="3">
-                <input
-                  type="text"
-                  style="width:90%"
-                  [(ngModel)]="key.role"
-                />
+                <input type="text" style="width: 90%;" [(ngModel)]="key.role" />
               </td>
             </tr>
             <tr>
@@ -90,7 +96,7 @@
                   type="text"
                   id="myInput"
                   [(ngModel)]="addKeys"
-                  style="width:90%"
+                  style="width: 90%;"
                   placeholder="Add your experience details..."
                 />
                 <span (click)="newElement(addKeys, key)" class="addBtn"
