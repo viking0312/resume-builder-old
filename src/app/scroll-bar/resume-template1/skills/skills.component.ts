@@ -6,8 +6,9 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
   styleUrls: ["./skills.component.scss"],
 })
 export class SkillsComponent implements OnInit {
-  @Input() skills = {};
+  @Input() skillsInfo = {};
   @Output() skillsObj = new EventEmitter();
+  skills = {};
   skillKeys: string[];
   newKey: string;
   newSkills: string[];
@@ -17,7 +18,7 @@ export class SkillsComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    console.log("maulik ngon" + JSON.stringify(this.skills));
+    this.skills = JSON.parse(JSON.stringify(this.skillsInfo));
     this.skillKeys = Object.keys(this.skills);
   }
 

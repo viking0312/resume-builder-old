@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { EditEducationDialogComponent } from "./scroll-bar/resume-template1/edit-education-dialog/edit-education-dialog.component";
 import { EditExperienceDialogComponent } from './scroll-bar/resume-template1/edit-experience-dialog/edit-experience-dialog.component';
+import { PersonalInfoComponent } from './scroll-bar/resume-template1/personal-info/personal-info.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { EditExperienceDialogComponent } from './scroll-bar/resume-template1/edi
     ResumeTemplate1Component,
     SkillsComponent,
     EditEducationDialogComponent,
-    EditExperienceDialogComponent
+    EditExperienceDialogComponent,
+    PersonalInfoComponent
   ],
   imports: [
     BrowserModule,

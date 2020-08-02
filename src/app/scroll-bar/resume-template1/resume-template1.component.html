@@ -30,41 +30,51 @@
         </button>
       </div>
       <div id="page-wrap" class="content">
-        <div id="contact-info" class="vcard">
-          <!-- Microformats! -->
+        <div
+          id="personal-info"
+          data-toggle="modal"
+          data-target="#exampleModalCenterPersonalInfo"
+        >
+          <div id="contact-info" class="vcard">
+            <!-- Microformats! -->
 
-          <h1 class="font-weight-bold">{{ personalInfoObj.name }}</h1>
-          <h3 class="font-weight-normal">{{ personalInfoObj.role }}</h3>
+            <h1 class="font-weight-bold">{{ personalInfoObj.name }}</h1>
+            <h3 class="font-weight-normal">{{ personalInfoObj.role }}</h3>
 
-          <div class="row">
-            <p class="col-sm-6">
-              Cell: <span class="tel">{{ personalInfoObj.cell }}</span>
-            </p>
-            <p class="col-sm-6">
-              DOB: <span class="tel">{{ personalInfoObj.dob }}</span>
-            </p>
+            <div class="row">
+              <p class="col-sm-6">
+                Cell: <span class="tel">{{ personalInfoObj.cell }}</span>
+              </p>
+              <p class="col-sm-6">
+                DOB: <span class="tel">{{ personalInfoObj.dob }}</span>
+              </p>
+            </div>
+            <div class="row">
+              <p class="col-sm-6 font-weight-normal">
+                Email:
+                <a class="email" href="m.maulik96@gmail.com">{{
+                  personalInfoObj.email
+                }}</a>
+              </p>
+              <p class="col-sm-6 font-weight-normal">
+                Address:
+                <span class="tel">{{ personalInfoObj.address }}</span>
+              </p>
+            </div>
           </div>
-          <div class="row">
-            <p class="col-sm-6 font-weight-normal">
-              Email:
-              <a class="email" href="m.maulik96@gmail.com">{{
-                personalInfoObj.email
-              }}</a>
-            </p>
-            <p class="col-sm-6 font-weight-normal">
-              Address:
-              <span class="tel">{{ personalInfoObj.address }}</span>
+
+          <div>
+            <p class="font-weight-normal" style="padding-top: 10px;">
+              {{ personalInfoObj.description }}
             </p>
           </div>
         </div>
 
-        <div>
-          <p class="font-weight-normal" style="padding-top: 10px;">
-            {{ personalInfoObj.decription }}
-          </p>
-        </div>
-
-        <div id="experience" data-toggle="modal" data-target="#experienceModalCenter">
+        <div
+          id="experience"
+          data-toggle="modal"
+          data-target="#experienceModalCenter"
+        >
           <div style="margin-top: 20px;">
             <span class="big-square"></span>
             <dt>EXPERIENCE</dt>
@@ -74,12 +84,22 @@
             style="margin-top: 30px;"
             *ngFor="let experience of experienceObj"
           >
-          <div class="col-sm-2 font-weight-bold" style="float: left;">
-            <div *ngIf="!experience.toDate.year">{{ experience.toDate }}</div>
-            <div *ngIf="experience.toDate.year">{{ experience.toDate.year }}-{{ experience.toDate.month }}-{{ experience.toDate.day }}</div>
-            <div *ngIf="!experience.fromDate.year">{{ experience.fromDate }}</div>
-            <div *ngIf="experience.fromDate.year" style="margin-top: 5px;">{{ experience.fromDate.year }}-{{ experience.fromDate.month }}-{{ experience.fromDate.day }}</div>
-          </div>
+            <div class="col-sm-2 font-weight-bold" style="float: left;">
+              <div *ngIf="!experience.toDate.year">{{ experience.toDate }}</div>
+              <div *ngIf="experience.toDate.year">
+                {{ experience.toDate.year }}-{{ experience.toDate.month }}-{{
+                  experience.toDate.day
+                }}
+              </div>
+              <div *ngIf="!experience.fromDate.year">
+                {{ experience.fromDate }}
+              </div>
+              <div *ngIf="experience.fromDate.year" style="margin-top: 5px;">
+                {{ experience.fromDate.year }}-{{
+                  experience.fromDate.month
+                }}-{{ experience.fromDate.day }}
+              </div>
+            </div>
             <div class="col-sm-10" style="float: left;">
               <div class="title-two">{{ experience.role }}</div>
               <div style="margin-top: 5px;">{{ experience.company }}</div>
@@ -93,7 +113,11 @@
             </div>
           </div>
         </div>
-        <div id="education" data-toggle="modal" data-target="#educationModalCenter">
+        <div
+          id="education"
+          data-toggle="modal"
+          data-target="#educationModalCenter"
+        >
           <div>
             <span class="big-square"></span>
             <dt>EDUCATION</dt>
@@ -105,9 +129,19 @@
           >
             <div class="col-sm-2 font-weight-bold" style="float: left;">
               <div *ngIf="!education.toDate.year">{{ education.toDate }}</div>
-              <div *ngIf="education.toDate.year">{{ education.toDate.year }}-{{ education.toDate.month }}-{{ education.toDate.day }}</div>
-              <div *ngIf="!education.fromDate.year">{{ education.fromDate }}</div>
-              <div *ngIf="education.fromDate.year" style="margin-top: 5px;">{{ education.fromDate.year }}-{{ education.fromDate.month }}-{{ education.fromDate.day }}</div>
+              <div *ngIf="education.toDate.year">
+                {{ education.toDate.year }}-{{ education.toDate.month }}-{{
+                  education.toDate.day
+                }}
+              </div>
+              <div *ngIf="!education.fromDate.year">
+                {{ education.fromDate }}
+              </div>
+              <div *ngIf="education.fromDate.year" style="margin-top: 5px;">
+                {{ education.fromDate.year }}-{{ education.fromDate.month }}-{{
+                  education.fromDate.day
+                }}
+              </div>
             </div>
             <div class="col-sm-10" style="float: left;">
               <div class="title-two">
@@ -141,10 +175,19 @@
     </div>
   </body>
 </html>
-<app-edit-experience-dialog [experiences]="experienceObj" (experienceObj)="updateExperience($event)"></app-edit-experience-dialog>
-<app-edit-education-dialog [educations]="educationObj" (educationObj)="updateEducations($event)"></app-edit-education-dialog>
+<app-personal-info
+  [personalInfo]="personalInfoObj"
+  (personalInfoObj)="updatePersonalInfo($event)"
+></app-personal-info>
+<app-edit-experience-dialog
+  [experiences]="experienceObj"
+  (experienceObj)="updateExperience($event)"
+></app-edit-experience-dialog>
+<app-edit-education-dialog
+  [educations]="educationObj"
+  (educationObj)="updateEducations($event)"
+></app-edit-education-dialog>
 <app-skills
-  [skills]="skillsObj"
+  [skillsInfo]="skillsObj"
   (skillsObj)="updateSkills($event)"
 ></app-skills>
-  

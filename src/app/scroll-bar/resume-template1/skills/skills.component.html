@@ -1,5 +1,5 @@
 <div
-  class="modal fade small-font"
+  class="modal fade"
   id="exampleModalCenter"
   tabindex="-1"
   role="dialog"
@@ -12,15 +12,24 @@
         <h5 class="modal-title" id="exampleModalCenterTitle">Skills</h5>
         <button
           type="button"
-          class="btn btn-primary float-right"
+          class="btn text-white bg-danger float-right"
           (click)="clearData()"
         >
           Clear
         </button>
       </div>
       <div class="modal-body">
-        <input [(ngModel)]="newKey" />
-        <tag-input [(ngModel)]="newSkills" [modelAsStrings]="true"></tag-input>
+        <div class="row">
+          <span class="col-sm-2">
+            Category:
+          </span>
+          <input class="col-sm-8" [(ngModel)]="newKey" />
+        </div>
+        <tag-input
+          [(ngModel)]="newSkills"
+          style="padding-top: 20px;"
+          [modelAsStrings]="true"
+        ></tag-input>
         <button type="button" class="btn btn-primary" (click)="addSkill()">
           Add
         </button>

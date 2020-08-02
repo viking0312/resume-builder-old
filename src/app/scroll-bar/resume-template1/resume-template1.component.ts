@@ -5,7 +5,7 @@ import {
   ElementRef,
   ViewChild,
   EventEmitter,
-  ViewEncapsulation
+  ViewEncapsulation,
 } from "@angular/core";
 import * as jspdf from "jspdf";
 import html2canvas from "html2canvas";
@@ -15,7 +15,7 @@ import sampleTemplate from "../../default-data.json";
   selector: "app-resume-template1",
   templateUrl: "./resume-template1.component.html",
   styleUrls: ["./resume-template1.component.scss"],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
 })
 export class ResumeTemplate1Component implements OnInit {
   personalInfoObj: any;
@@ -45,26 +45,27 @@ export class ResumeTemplate1Component implements OnInit {
     this.template1.emit(false);
   }
   updateSkills(data) {
-    console.log("what the hell" + JSON.stringify(data));
     this.skillsObj = data;
     if (data != null) this.skills = Object.keys(this.skillsObj);
     else this.skills = [];
   }
+  updatePersonalInfo(data) {
+    console.log(JSON.stringify(data));
+    this.personalInfoObj = data;
+  }
   updateEducations(data) {
-    console.log("what the hell for educations" + JSON.stringify(data));
     this.educationObj = data;
     if (data != null) this.educations = Object.keys(this.educationObj);
     else this.educations = [];
   }
   updateExperience(data) {
-    console.log("what the hell for experiences" + JSON.stringify(data));
     this.experienceObj = data;
     if (data != null) this.experiences = Object.keys(this.experienceObj);
     else this.experiences = [];
   }
   public convetToPDF() {
     var data = document.getElementById("page-wrap");
-    html2canvas(data).then(canvas => {
+    html2canvas(data).then((canvas) => {
       // Few necessary setting options
       var imgWidth = 208;
       var pageHeight = 295;

@@ -1,0 +1,113 @@
+<div
+  class="modal fade small-font"
+  id="exampleModalCenterPersonalInfo"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Personal Info</h5>
+        <button
+          type="button"
+          class="btn bg-danger text-white float-right"
+          (click)="clearData()"
+        >
+          Clear
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-hover">
+          <tbody>
+            <tr>
+              <td>
+                <span>
+                  Name
+                </span>
+              </td>
+              <td>
+                <input style="width: 90%;" [(ngModel)]="personalData.name" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span>Role</span>
+              </td>
+              <td>
+                <input style="width: 90%;" [(ngModel)]="personalData.role" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span>
+                  Cell
+                </span>
+              </td>
+              <td>
+                <input style="width: 90%;" [(ngModel)]="personalData.cell" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span>
+                  DOB
+                </span>
+              </td>
+              <td>
+                <input style="width: 90%;" [(ngModel)]="personalData.dob" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span>
+                  Email
+                </span>
+              </td>
+              <td>
+                <input style="width: 90%;" [(ngModel)]="personalData.email" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span>
+                  Address
+                </span>
+              </td>
+              <td>
+                <input style="width: 90%;" [(ngModel)]="personalData.address" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span>
+                  Description
+                </span>
+              </td>
+              <td>
+                <textarea
+                  style="width: 90%;"
+                  [(ngModel)]="personalData.description"
+                ></textarea>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          (click)="saveChanges()"
+          data-dismiss="modal"
+        >
+          Save changes
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
