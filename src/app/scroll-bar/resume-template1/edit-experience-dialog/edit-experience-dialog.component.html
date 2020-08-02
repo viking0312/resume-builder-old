@@ -14,13 +14,6 @@
         </h5>
         <button
           type="button"
-          class="btn btn-primary float-right"
-          (click)="clearData()"
-        >
-          Clear
-        </button>
-        <button
-          type="button"
           class="close"
           data-dismiss="modal"
           aria-label="Close"
@@ -35,6 +28,13 @@
           (click)="addexperiences()"
         >
           Add Other Experience
+        </button>
+        <button
+          type="button"
+          class="btn bg-danger text-white"
+          (click)="clearData()"
+        >
+          Clear
         </button>
         <table class="table table-hover">
           <tbody *ngFor="let key of experienceInfo">
@@ -99,7 +99,9 @@
                   style="width: 90%;"
                   placeholder="Add your experience details..."
                 />
-                <span (click)="newElement(addKeys, key)" class="addBtn"
+                <span
+                  (click)="newElement(addKeys, key)"
+                  class="btn btn-primary addBtn"
                   >Add</span
                 >
               </td>

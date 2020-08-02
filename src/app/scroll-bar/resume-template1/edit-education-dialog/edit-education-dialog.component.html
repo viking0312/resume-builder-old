@@ -9,14 +9,10 @@
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle">Educations</h5>
-        <button
-          type="button"
-          class="btn btn-primary float-right"
-          (click)="clearData()"
-        >
-          Clear
-        </button>
+        <h5 class="modal-title" id="exampleModalCenterTitle">
+          Educations Details
+        </h5>
+
         <button
           type="button"
           class="close"
@@ -29,6 +25,13 @@
       <div class="modal-body">
         <button type="button" class="btn btn-primary" (click)="addEducations()">
           Add Other Educations
+        </button>
+        <button
+          type="button"
+          class="btn bg-danger text-white"
+          (click)="clearData()"
+        >
+          Clear
         </button>
         <table class="table table-hover">
           <tbody *ngFor="let key of educationInfo">
@@ -97,7 +100,9 @@
                   style="width: 90%;"
                   placeholder="Add your education details..."
                 />
-                <span (click)="newElement(addKeys, key)" class="addBtn"
+                <span
+                  (click)="newElement(addKeys, key)"
+                  class="btn btn-primary addBtn"
                   >Add</span
                 >
               </td>

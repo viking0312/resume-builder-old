@@ -20,11 +20,9 @@ button.calendar:active {
   background-position: center;
 }
 .addBtn {
-  padding: 3px;
+  padding: 5px;
   margin-left: -15px;
   width: 10%;
-  background: #d9d9d9;
-  color: #555;
   float: right;
   text-align: center;
   font-size: 16px;
@@ -35,12 +33,7 @@ button.calendar:active {
 .addBtn:hover {
   background-color: #bbb;
 }
-// input {
-//   margin: 0;
-//   border: none;
-//   border-radius: 0;
-//   width: 75%;
-//   padding: 10px;
-//   float: left;
-//   font-size: 16px;
-// }
+input {
+  border-radius: 0;
+  padding: 4px;
+}
