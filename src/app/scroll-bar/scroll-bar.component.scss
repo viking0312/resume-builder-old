@@ -8,7 +8,27 @@
   position: relative;
 }
 
-.slick-prev:before,
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  display: none;
+}
+
+.slick-prev {
+  left: 0px;
+  z-index: 1;
+}
+.slick-next {
+  right: 25px;
+}
+
+.slick-prev:before {
+  color: transparent !important;
+  font-size: 30px;
+  background-image: url("../../assets/images/baseline_keyboard_arrow_left_black_18dp.png");
+}
+
 .slick-next:before {
-  color: red !important;
+  color: transparent !important;
+  font-size: 30px;
+  background-image: url("../../assets/images/baseline_keyboard_arrow_right_black_18dp.png");
 }

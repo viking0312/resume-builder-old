@@ -13,7 +13,7 @@ export class ScrollBarComponent implements OnInit {
   ngOnInit() {}
 
   images = [
-    { img: "../../assets/images/mockup-image-1.png" },
+    { img: "../../assets/images/mockup-image-2.png" },
     { img: "../../assets/images/mockup-image-1.png" },
     { img: "../../assets/images/mockup-image-1.png" },
     { img: "../../assets/images/mockup-image-1.png" },
