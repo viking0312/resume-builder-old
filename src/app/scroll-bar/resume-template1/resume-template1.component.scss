@@ -19,15 +19,6 @@
   width: 70%;
 }
 
-#education {
-}
-
-#experience {
-}
-
-#skills {
-}
-
 #overlay {
   position: absolute;
   display: block;
@@ -88,17 +79,29 @@ a:hover {
   border-bottom-style: solid;
   color: black;
 }
+#personal-info:hover {
+  box-shadow: 0 0 10px #aaaaaa;
+}
+#personal-info {
+  padding: 10px;
+}
 #skills:hover {
-  border: 3px darkgray;
-  background-color: lightgray;
+  box-shadow: 0 0 10px #aaaaaa;
+}
+#skills {
+  padding: 10px;
 }
 #experience:hover {
-  border: 3px darkgray;
-  background-color: lightgray;
+  box-shadow: 0 0 10px #aaaaaa;
+}
+#experience {
+  padding: 10px;
 }
 #education:hover {
-  border: 3px darkgray;
-  background-color: lightgray;
+  box-shadow: 0 0 10px #aaaaaa;
+}
+#education {
+  padding: 10px;
 }
 #objective {
   width: 500px;

@@ -77,16 +77,16 @@
           data-toggle="modal"
           data-target="#experienceModalCenter"
         >
-          <div style="margin-top: 20px;">
+          <div>
             <span class="big-square"></span>
             <dt>EXPERIENCE</dt>
           </div>
           <div
-            class="col-sm-12"
             style="margin-top: 30px;"
             *ngFor="let experience of experienceObj"
           >
-            <div class="col-sm-2 font-weight-bold" style="float: left;">
+          <div class="col-sm-12">
+            <div class="col-sm-2 font-weight-bold" style="display: inline-block;">
               <div *ngIf="!experience.toDate.year">{{ experience.toDate }}</div>
               <div *ngIf="experience.toDate.year">
                 {{ experience.toDate.year }}-{{ experience.toDate.month }}-{{
@@ -102,10 +102,16 @@
                 }}-{{ experience.fromDate.day }}
               </div>
             </div>
-            <div class="col-sm-10" style="float: left;">
-              <div class="title-two">{{ experience.role }}</div>
+            <div class="col-sm-10" style="display: inline-block;">
+              <div class="title-two font-weight-bold">{{ experience.role }}</div>
               <div style="margin-top: 5px;">{{ experience.company }}</div>
-              <div style="margin-left: -24px; margin-top: 5px;">
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="col-sm-2" style="display: inline-block;">
+            </div>
+            <div class="col-sm-10" style="display: inline-block;">
+              <div style="margin-left: -20px; margin-top: 5px;">
                 <ul *ngFor="let keyPoint of experience.keyPoints">
                   <li>
                     {{ keyPoint }}
@@ -113,6 +119,7 @@
                 </ul>
               </div>
             </div>
+          </div>
           </div>
         </div>
         <div
@@ -126,11 +133,11 @@
             <dt>EDUCATION</dt>
           </div>
           <div
-            class="col-sm-12"
             style="margin-top: 30px;"
             *ngFor="let education of educationObj"
           >
-            <div class="col-sm-2 font-weight-bold" style="float: left;">
+          <div class="col-sm-12">
+            <div class="col-sm-2 font-weight-bold" style="display: inline-block;">
               <div *ngIf="!education.toDate.year">{{ education.toDate }}</div>
               <div *ngIf="education.toDate.year">
                 {{ education.toDate.year }}-{{ education.toDate.month }}-{{
@@ -145,18 +152,24 @@
                   education.fromDate.day
                 }}
               </div>
+          </div>
+          <div class="col-sm-10" style="display: inline-block;">
+            <div class="title-two font-weight-bold"> {{ education.institute }}</div>
+            <div style="margin-top: 5px;">{{ education.degree }}</div>
+          </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="col-sm-2" style="display: inline-block;">
+              <div></div>
             </div>
-            <div class="col-sm-10" style="float: left;">
-              <div class="title-two">
-                {{ education.institute }}
+            <div class="col-sm-10" style="display: inline-block;">
+                <div style="margin-left: -20px; margin-top: 5px;">
+                  <ul *ngFor="let keyPoint of education.keyPoints">
+                    <li>{{ keyPoint }}</li>
+                  </ul>
+                </div>
               </div>
-              <div style="margin-top: 5px;">{{ education.degree }}</div>
-              <div style="margin-left: -24px; margin-top: 5px;">
-                <ul *ngFor="let keyPoint of education.keyPoints">
-                  <li>{{ keyPoint }}</li>
-                </ul>
-              </div>
-            </div>
+          </div>
           </div>
         </div>
         <div
@@ -165,7 +178,7 @@
           data-toggle="modal"
           data-target="#exampleModalCenter"
         >
-          <div style="margin-top: 20px;">
+          <div>
             <span class="big-square"></span>
             <dt>SKILLS</dt>
           </div>
