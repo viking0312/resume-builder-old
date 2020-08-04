@@ -32,6 +32,7 @@
       <div id="page-wrap" class="content">
         <div
           id="personal-info"
+          (click)="openPersonalInfoPopup()"
           data-toggle="modal"
           data-target="#exampleModalCenterPersonalInfo"
         >
@@ -72,6 +73,7 @@
 
         <div
           id="experience"
+          (click)="openExperiencePopup()"
           data-toggle="modal"
           data-target="#experienceModalCenter"
         >
@@ -115,6 +117,7 @@
         </div>
         <div
           id="education"
+          (click)="openEducationPopup()"
           data-toggle="modal"
           data-target="#educationModalCenter"
         >
@@ -156,7 +159,12 @@
             </div>
           </div>
         </div>
-        <div id="skills" data-toggle="modal" data-target="#exampleModalCenter">
+        <div
+          (click)="openSkillsPopup()"
+          id="skills"
+          data-toggle="modal"
+          data-target="#exampleModalCenter"
+        >
           <div style="margin-top: 20px;">
             <span class="big-square"></span>
             <dt>SKILLS</dt>
@@ -176,18 +184,22 @@
   </body>
 </html>
 <app-personal-info
+  *ngIf="personalInfoPopup"
   [personalInfo]="personalInfoObj"
   (personalInfoObj)="updatePersonalInfo($event)"
 ></app-personal-info>
 <app-edit-experience-dialog
+  *ngIf="experiencePopup"
   [experiences]="experienceObj"
   (experienceObj)="updateExperience($event)"
 ></app-edit-experience-dialog>
 <app-edit-education-dialog
+  *ngIf="educationPopup"
   [educations]="educationObj"
   (educationObj)="updateEducations($event)"
 ></app-edit-education-dialog>
 <app-skills
+  *ngIf="skillsPopup"
   [skillsInfo]="skillsObj"
   (skillsObj)="updateSkills($event)"
 ></app-skills>

@@ -19,6 +19,10 @@ import sampleTemplate from "../../default-data.json";
 })
 export class ResumeTemplate1Component implements OnInit {
   personalInfoObj: any;
+  personalInfoPopup = false;
+  experiencePopup = false;
+  educationPopup = false;
+  skillsPopup = false;
   experienceObj = [];
   educationObj = [];
   skillsObj: any;
@@ -48,20 +52,36 @@ export class ResumeTemplate1Component implements OnInit {
     this.skillsObj = data;
     if (data != null) this.skills = Object.keys(this.skillsObj);
     else this.skills = [];
+    this.skillsPopup = false;
   }
   updatePersonalInfo(data) {
     console.log(JSON.stringify(data));
     this.personalInfoObj = data;
+    this.personalInfoPopup = false;
   }
   updateEducations(data) {
     this.educationObj = data;
     if (data != null) this.educations = Object.keys(this.educationObj);
     else this.educations = [];
+    this.educationPopup = false;
   }
   updateExperience(data) {
     this.experienceObj = data;
     if (data != null) this.experiences = Object.keys(this.experienceObj);
     else this.experiences = [];
+    this.experiencePopup = false;
+  }
+  openPersonalInfoPopup() {
+    this.personalInfoPopup = true;
+  }
+  openExperiencePopup() {
+    this.experiencePopup = true;
+  }
+  openEducationPopup() {
+    this.educationPopup = true;
+  }
+  openSkillsPopup() {
+    this.skillsPopup = true;
   }
   public convetToPDF() {
     var data = document.getElementById("page-wrap");

@@ -18,8 +18,6 @@ export class EditExperienceDialogComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    //console.log("maulik" + JSON.stringify(this.skills));
-    //this.experienceInfo = this.experiences;
     this.experienceInfo = JSON.parse(JSON.stringify(this.experiences));
   }
   addexperiences() {

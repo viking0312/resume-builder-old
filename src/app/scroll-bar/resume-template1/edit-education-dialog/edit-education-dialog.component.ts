@@ -4,13 +4,13 @@ import {
   Input,
   Output,
   EventEmitter,
-  ViewEncapsulation
+  ViewEncapsulation,
 } from "@angular/core";
 
 @Component({
   selector: "app-edit-education-dialog",
   templateUrl: "./edit-education-dialog.component.html",
-  styleUrls: ["./edit-education-dialog.component.scss"]
+  styleUrls: ["./edit-education-dialog.component.scss"],
 })
 export class EditEducationDialogComponent implements OnInit {
   @Input() educations: any;
@@ -25,8 +25,6 @@ export class EditEducationDialogComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    //console.log("maulik" + JSON.stringify(this.skills));
-    //this.educationInfo = this.educations;
     this.educationInfo = JSON.parse(JSON.stringify(this.educations));
   }
   addEducations() {
@@ -35,7 +33,7 @@ export class EditEducationDialogComponent implements OnInit {
       toDate: "",
       institute: "",
       degree: "",
-      keyPoints: []
+      keyPoints: [],
     };
     this.educationInfo.push(this.newEducations);
     //this.newEducations = [];
@@ -55,7 +53,6 @@ export class EditEducationDialogComponent implements OnInit {
   }
 
   saveChanges() {
-    console.log("Inside saveChanges");
     console.log(this.educationInfo);
     this.educationObj.emit(this.educationInfo);
   }
@@ -67,7 +64,7 @@ export class EditEducationDialogComponent implements OnInit {
       institute: "",
       degree: "",
       index: 0,
-      keyPoints: []
+      keyPoints: [],
     };
   }
 }
